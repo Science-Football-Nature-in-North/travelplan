@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reiseplan: Helsinki – Åland – Stockholm</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --accent: #2563eb;
+            --accent2: #06b6d4;
+            --muted: #94a3b8;
+            --warn: #f97316;
+            --white: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: var(--white);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        .badge.flight {
+            background: var(--accent)
+        }
+
+        .badge.ferry {
+            background: var(--accent2)
+        }
+
+        .badge.camp {
+            background: var(--warn)
+        }
+
+        .badge.match {
+            background: #16a34a
+        }
+
+        .timeline {
+            border-left: 3px solid var(--accent);
+            padding-left: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            left: -32px;
+            top: 25px;
+            width: 14px;
+            height: 14px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .date {
+            font-weight: 800;
+            color: var(--accent2);
+        }
+
+        h2 {
+            margin: 5px 0 10px 0;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 18px;
+        }
+
+        .note {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .cost {
+            color: var(--warn);
+            font-weight: 600;
+        }
+
+        .image-section {
+            margin-top: 50px;
+        }
+
+        .image-card {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+        }
+
+        .placeholder {
+            margin-top: 15px;
+            height: 250px;
+            border: 2px dashed var(--muted);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        a {
+            color: var(--accent)
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Reiseplan: Helsinki → Åland → Stockholm</h1>
+    <div class="subtitle">23.07 – 04.08</div>
+
+    <div>
+        <span class="badge flight">Flug</span>
+        <span class="badge ferry">Fähre</span>
+        <span class="badge camp">Camping</span>
+        <span class="badge match">Match</span>
+    </div>
+
+    <br><br>
+
+    <div class="timeline">
+
+        <div class="card">
+            <div class="date">23.07</div>
+            <h2>Anreise nach Helsinki</h2>
+            <ul>
+                <li>Flug nach Helsinki</li>
+                <li>Rest vom Tag: Sightseeing</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="date">24.07</div>
+            <h2>Helsinki & Heureka</h2>
+            <ul>
+                <li>Sightseeing in Helsinki</li>
+                <li>Optional: <a href="https://heureka.fi" target="_blank">Heureka Science Center</a></li>
+                <li>Am Abend Nachtfähre nach Åland</li>
+            </ul>
+            <div class="cost">Nachtfähre ca. 100€</div>
+        </div>
+
+        <div class="card">
+            <div class="date">25.07</div>
+            <h2>Åland & IFK Mariehamn</h2>
+            <ul>
+                <li>Chillen auf Åland</li>
+                <li>15:00 – 1. Liga Match IFK Mariehamn</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="date">26.07</div>
+            <h2>Fähre nach Stockholm</h2>
+            <ul>
+                <li>Flexible Überfahrt</li>
+                <li>Abendspaziergang nach Ankunft</li>
+            </ul>
+            <div class="cost">20–30€</div>
+        </div>
+
+        <div class="card">
+            <div class="date">27.07 – 01.08</div>
+            <h2>PostPrüfungPizzaPlausch & Campen</h2>
+            <ul>
+                <li>Camping mit Bären</li>
+                <li>Outdoor & Relax</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="date">02.08</div>
+            <h2>Sightseeing Stockholm</h2>
+        </div>
+
+        <div class="card">
+            <div class="date">03.08</div>
+            <h2>Matchday</h2>
+            <ul>
+                <li>AIK Stockholm oder Djurgårdens</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="date">04.08</div>
+            <h2>Rückflug</h2>
+        </div>
+
+    </div>
+
+
+    <div class="image-section">
+        <h1>Bilder</h1>
+
+        <div class="image-card">
+            <h2>Helsinki</h2>
+            <img src="./helsinki.jpeg" width="100%" \>
+        </div>
+
+        <div class="image-card">
+            <h2>Heureka</h2>
+            <img src="./helsinki-hafen.jpeg" width="100%" \>
+        </div>
+
+        <div class="image-card">
+            <h2>Åland Islands</h2>
+            <img src="./aland.jpeg" width="100%"/>
+        </div>
+
+        <div class="image-card">
+            <h2>IFK Mariehamn</h2>
+            <img src="./mariehamm.jpeg" width="100%"/>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
